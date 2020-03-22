@@ -10,6 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_03_21_161812) do
+
+  create_table "campaigns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name"
+    t.string "from_email"
+    t.string "from_name"
+    t.string "reply_to"
+    t.string "title"
+    t.text "plain_text"
+    t.text "html_text"
+    t.date "sent_date"
+    t.integer "recipients"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "aasm_state"
+  end
 
 end

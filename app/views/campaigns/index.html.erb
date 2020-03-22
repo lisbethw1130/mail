@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Campaigns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campaign Name</th>
+      <th>From email</th>
+      <th>From name</th>
+      <th>Reply to</th>
+      <th>Title</th>
+      <th>Plain text</th>
+      <th>Html text</th>
+      <th>Sent date</th>
+      <th>預估收件人數</th>
+      <th>目前狀態</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaigns.each do |campaign| %>
+      <tr>
+        <td><%= campaign.name %></td>
+        <td><%= campaign.from_email %></td>
+        <td><%= campaign.from_name %></td>
+        <td><%= campaign.reply_to %></td>
+        <td><%= campaign.title %></td>
+        <td><%= campaign.plain_text %></td>
+        <td><%= campaign.html_text %></td>
+        <td><%= campaign.sent_date %></td>
+        <td><%= campaign.recipients %></td>
+        <td><%= campaign.aasm_state %></td>
+
+        <td><%= link_to 'Show', campaign %></td>
+        <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
+        <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Campaign', new_campaign_path %>

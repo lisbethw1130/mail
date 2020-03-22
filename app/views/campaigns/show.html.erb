@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @campaign.name %>
+</p>
+
+<p>
+  <strong>From email:</strong>
+  <%= @campaign.from_email %>
+</p>
+
+<p>
+  <strong>From name:</strong>
+  <%= @campaign.from_name %>
+</p>
+
+<p>
+  <strong>Reply to:</strong>
+  <%= @campaign.reply_to %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @campaign.title %>
+</p>
+
+<p>
+  <strong>Plain text:</strong>
+  <%= @campaign.plain_text %>
+</p>
+
+<p>
+  <strong>Html text:</strong>
+  <%= @campaign.html_text %>
+</p>
+
+<p>
+  <strong>Sent date:</strong>
+  <%= @campaign.sent_date %>
+</p>
+
+<p>
+  <strong>Recipients:</strong>
+  <%= @campaign.recipients %>
+</p>
+
+<p>
+  <strong>目前狀態:</strong>
+  <%= @campaign.aasm_state %>
+</p>
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaigns_path %>
