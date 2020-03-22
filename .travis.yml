@@ -1,6 +1,9 @@
 language: ruby
 services:
   - mysql
-before_script:
-  - bundle exec rake db:setup
-  - cp config/database.ci.yml configdatabase.yml
+cache: bundler
+before-script:
+  - cp config/database.ci.yml config/database.yml
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+  - bundle exec rake test
