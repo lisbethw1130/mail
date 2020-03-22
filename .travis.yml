@@ -3,5 +3,4 @@ services:
   - mysql
 before_script:
   - bundle exec rake db:setup
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
+  - cp config/database.ci.yml configdatabase.yml
