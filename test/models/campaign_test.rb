@@ -6,6 +6,6 @@ class CampaignTest < ActiveSupport::TestCase
   # end
   test 'wrong test' do
     campaign = Campaign.new
-    assert_not campaign.save
+    assert campaign.save
   end
 end

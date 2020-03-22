@@ -1,4 +1,4 @@
-require 'testhelper'
+require 'test_helper'
 
 class CampaignsControllerTest < ActionDispatch::IntegrationTest
   setup do
